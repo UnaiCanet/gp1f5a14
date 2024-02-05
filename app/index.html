@@ -4,11 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculadora VPS</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    form {
+      max-width: 400px;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
-  <h1>Calculadora VPS</h1>
   <form action="calculadora.php" method="post">
-    <label for="cpu">CPUs:</label>
+    <h1>Calculadora VPS</h1>
+    
+    <label for="cpu">CPUs:</label><br>
     <select name="cpu" id="cpu">
       <option value="1">1</option>
       <option value="2">2</option>
@@ -16,7 +31,7 @@
       <option value="8">8</option>
     </select><br>
 
-    <label for="ram">RAM (en GiB):</label>
+    <label for="ram">RAM (en GiB):</label><br>
     <select name="ram" id="ram">
       <option value="1">1</option>
       <option value="2">2</option>
@@ -25,7 +40,7 @@
       <option value="16">16</option>
     </select><br>
 
-    <label for="ssd">Disc dur SSD (en GiB):</label>
+    <label for="ssd">Disc dur SSD (en GiB):</label><br>
     <select name="ssd" id="ssd">
       <option value="10">10</option>
       <option value="20">20</option>
@@ -33,21 +48,21 @@
       <option value="80">80</option>
     </select><br>
 
-    <label for="os">Sistema operatiu:</label>
+    <label for="os">Sistema operatiu:</label><br>
     <select name="os" id="os">
       <option value="debian">Debian 10 (1€/mes)</option>
       <option value="windows">Windows 2019 Std. (5€/mes)</option>
     </select><br>
 
-    <label for="ip">IP fixa:</label>
+    <label for="ip">IP fixa:</label><br>
     <input type="radio" name="ip" value="no" checked> No (0€/mes)
     <input type="radio" name="ip" value="si"> Sí (2€/mes)<br>
 
-    <label for="cpu_type">Tipus de CPU:</label>
+    <label for="cpu_type">Tipus de CPU:</label><br>
     <input type="radio" name="cpu_type" value="intel" checked> Intel (2€/mes)
     <input type="radio" name="cpu_type" value="amd"> AMD (1€/mes)<br>
 
-    <label for="access">Tipus Accés:</label>
+    <label for="access">Tipus Accés:</label><br>
     <input type="radio" name="access" value="ssh" checked> Només SSH (0€/mes)
     <input type="radio" name="access" value="web"> Només consola web (1€/mes)
     <input type="radio" name="access" value="ssh_web"> SSH i consola web (2€/més)<br>
@@ -56,3 +71,4 @@
   </form>
 </body>
 </html>
+
